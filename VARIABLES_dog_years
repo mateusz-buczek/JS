@@ -1,0 +1,25 @@
+/* Task from Codeacademy JS course 
+  Training the use of variables by creating dog years calculator (takes human age and converts to dog age)
+  */
+
+// variable containing human age
+const myAge = 29;
+// variable for "infant" years 
+let earlyYears = 2;
+earlyYears = 10.5 * earlyYears;
+// subtracting early years from my age for proper calcucations 
+let laterYears = myAge - earlyYears;
+// multiplying by 4 to get dog adult years
+laterYears *= 4;
+
+// checking if everything fits
+console.log(earlyYears, laterYears);
+
+// calculating actual dog age 
+myAgeInDogYears = earlyYears + laterYears;
+
+// variable for lowercased name 
+myName = 'Human'.toLowerCase();
+
+// presenting results 
+console.log(`My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years.`)
