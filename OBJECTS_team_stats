@@ -1,0 +1,75 @@
+/* We want to create and extract information about your favorite sports team. Basketball, soccer, tennis, or water polo, you pick it. It’’s your job to create data using the JavaScript data structures at your disposal: arrays, objects, etc.
+
+Once created, you can manipulate these data structures as well as gain insights from them. For example, you might want to get the total number of games your team has played. */
+
+
+
+const team = {
+  _players: [
+    {
+      firstName: 'Marian',
+      lastName: 'Padzioch',
+      age: 55,
+    },
+    {
+      firstName: 'Ferdek',
+      lastName: 'Kiepski',
+      age: 54,
+    },
+    {
+      firstName: 'Waldu',
+      lastName: 'Kiepski',
+      age: 25,
+    },
+  ],
+  _games: [
+    {
+      opponent: 'Kasztaniak RKS',
+      teamPoints: 47, 
+      opponentPoints: 27,
+    },
+    {
+      opponent: 'GKS Wypizdwka',
+      teamPoints: 15, 
+      opponentPoints: 30,
+    }, 
+    {
+      opponent: 'FC Drzewce',
+      teamPoints: 58, 
+      opponentPoints: 62,
+    },
+  ],
+  get players() {
+    return this._players;
+  },
+  get games() {
+    return this._games;
+  },
+  addPlayer(firstName, lastName, age) {
+    const player = {
+      firstName,
+      lastName,
+      age,
+    };
+    this._players.push(player);
+  },
+  addGame(opponent, teamPoints, opponentPoints) {
+    const game = {
+      opponent,
+      teamPoints,
+      opponentPoints,
+    };
+    this._games.push(game);
+  },
+};
+
+
+team.addPlayer('Steph', 'Curry', 28);
+team.addPlayer('Lisa', 'Leslie', 44);
+team.addPlayer('Bugs', 'Bunny', 76);
+console.log(team.players);
+
+team.addGame('Avia', 100, 50);
+team.addGame('Motor', 150, 600);
+team.addGame('Arka', 50, 100);
+console.log(team.games);
